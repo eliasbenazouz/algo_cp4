@@ -1,0 +1,17 @@
+ALGORITHM insertionSort
+VAR
+    hand : ARRAY_OF INTEGER[hand.length];
+    i,k,card : INTEGER := 0;
+BEGIN
+    FOR i FROM 0 TO hand.length STEP 1  DO
+        let k = i-1
+        let card = hand[i]
+        WHILE (k>=0 && card<hand[k]) DO
+            hand[k+1] = hand[k]
+            k= k-1
+        END_WHILE
+        hand[k+1] = card
+    END_FOR
+END
+
+Write(hand)
